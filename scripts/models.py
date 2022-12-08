@@ -13,16 +13,17 @@ from torch.nn import Linear, Parameter, Sigmoid
 
 
 class RandomFourierFeatureNetwork(torch.nn.Module):
-    def __init__(self, nfeature, n_layers):
+    def __init__(self, nfeature, n_layers, n_outputs = 1):
         super().__init__()
         self.n_layers = n_layers
+        self.n_outputs = n_outputs
         self.inputs = Linear(2 * nfeature, nfeature)
 
         # hidden layers
         for i in range(self.n_layers):
             setattr(self, f"ln{i+1}", Linear(nfeature, nfeature))
 
-        self.outputs = Linear(nfeature, 1)
+        self.outputs = Linear(nfeature, self.n_outputs)
         self.sigmoid = Sigmoid()
         self.relu = torch.relu
 

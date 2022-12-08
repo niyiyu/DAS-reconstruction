@@ -14,8 +14,12 @@ import numpy as np
 class OOIDASDataset(torch.utils.data.Dataset):
     def __init__(self, inputs, outputs):
         'Initialization'
-        self.inputs = inputs.astype(np.float32)
-        self.outputs = outputs.astype(np.float32)
+        if isinstance(inputs, torch.Tensor):
+            self.inputs = inputs
+            self.outputs = outputs
+        else:
+            self.inputs = inputs.astype(np.float32)
+            self.outputs = outputs.astype(np.float32)
 
     def __len__(self):
         'Denotes the total number of samples'

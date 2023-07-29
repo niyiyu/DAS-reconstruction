@@ -3,9 +3,12 @@ __pycache__/
 *.py[cod]
 *$py.class
 **/.DS_Store
-
+figures/*.pdf
 # C extensions
 *.so
+
+# Datasets
+datasets/
 
 # Distribution / packaging
 .Python

@@ -1,4 +1,4 @@
-# Compressing Distributed Acoustic Sensing Data using Machine Learning Method
+# Distributed Acoustic Sensing Compression and Reconstruction using Machine Learning
 ![SIREN_vs_RFFN](./figures/siren_vs_rffn_50_40epoch.gif)
 
 ## Tutorials

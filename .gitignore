@@ -3,7 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 **/.DS_Store
-figures/*.pdf
+figures/INR/*.pdf
 # C extensions
 *.so
 

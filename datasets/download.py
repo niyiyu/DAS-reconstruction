@@ -6,13 +6,13 @@ import os
 import wget
 
 # download data for TERRA?
-TERRA = False
+TERRA = True
 if TERRA:
     print("INFO: will download TERRA data.")
     os.makedirs("./TERRA", exist_ok=True)
 
 # download data for KKFLS?
-KKFLS = False
+KKFLS = True
 if KKFLS:
     print("INFO: will download KKFL-S data.")
     os.makedirs("./KKFLS", exist_ok=True)

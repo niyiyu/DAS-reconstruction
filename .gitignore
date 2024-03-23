@@ -7,8 +7,11 @@ figures/INR/*.pdf
 # C extensions
 *.so
 
-# Datasets
-datasets/
+# misc
+datasets/SHRED
+figures/manuscript
+*.docs
+*.pptx
 
 # Distribution / packaging
 .Python

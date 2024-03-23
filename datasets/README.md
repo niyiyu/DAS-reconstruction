@@ -1,4 +1,4 @@
-## Retrieve data from Cook Inlet DAS experiment
+## Retrieve earthquake data from Cook Inlet DAS experiment
 
 The earthquake data from the Cook Inlet DAS experiment are available at [https://dasway.ess.washington.edu/gci/index.html](https://dasway.ess.washington.edu/gci/index.html). Events are updated daily.
 

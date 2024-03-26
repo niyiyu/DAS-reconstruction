@@ -8,7 +8,7 @@ figures/INR/*.pdf
 *.so
 
 # misc
-datasets/SHRED
+data/SHRED
 figures/manuscript
 *.docs
 *.pptx

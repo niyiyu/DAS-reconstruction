@@ -1,15 +1,15 @@
-# Distributed Acoustic Sensing Compression and Reconstruction using Machine Learning
-![SIREN_vs_RFFN](./figures/siren_vs_rffn_50_40epoch.gif)
+# Distributed Acoustic Sensing Compression and Reconstruction with Machine Learning
+![](./figures/reconstruction.png)
 
 ## Tutorials
-Jupyter notebooks are provided that showcases compressing a downsampled OOI DAS data segments:
-- Random Fourier Feature Network
-    - training: [notebooks/rffn_training_ooi_10min_pytorch.ipynb](./notebooks/INR/rffn_training_ooi_10min.ipynb)
-    - reconstruct: [notebooks/rffn_reconstruct_ooi_10min_pytorch.ipynb](./notebooks/INR/rffn_reconstruct_ooi_10mim.ipynb)
-- SIREN
+All codes are implemented in PyTorch.
+![SHRED](./figures/shred.png)
+- SHallow REcurrent Decoder (SHRED): [notebooks/SHRED_KKFLS_training.ipynb](./notebooks/SHRED_KKFLS_training.ipynb)
 
-## Requirements
-All codes are implemented in PyTorch (https://pytorch.org), but the TensorFlow implementation of some models are provided (see [notebooks](./notebooks/)). A NVidia A100 GPU is used for all tests. Note that codes are not tested on MacBook Pro with M1 chips.
+#### Implicit Neural Representation (INR)
+![SIREN_vs_RFFN](./figures/siren_vs_rffn_50_40epoch.gif)
+- Random Fourier Feature Network (RFFN): [notebooks/RFFN_KKFLS_training.ipynb](./notebooks/RFFN_KKFLS_training.ipynb)
+- Sinusoidal Representation Network (SIREN): [notebooks/SIREN_KKFLS_training.ipynb](./notebooks/SIREN_KKFLS_training.ipynb)
 
 ## Data
 Please see [data/README.md](./data/README.md) for instructions on downloading Cook Inlet DAS data.

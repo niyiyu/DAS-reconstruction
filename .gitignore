@@ -12,6 +12,8 @@ data/SHRED
 figures/manuscript
 *.docs
 *.pptx
+*.pt
+*.out
 
 # Distribution / packaging
 .Python

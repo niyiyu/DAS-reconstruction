@@ -1,20 +1,21 @@
-# Distributed Acoustic Sensing Compression and Reconstruction with Machine Learning
+# Distributed Acoustic Sensing Compression and Wavefield Reconstruction with Deep Learning
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 ![](./figures/reconstruction.png)
 
 ## Tutorials
 All codes are implemented in PyTorch.
 ![SHRED](./figures/shred.png)
-- SHallow REcurrent Decoder (SHRED): [notebooks/SHRED_KKFLS_training.ipynb](./notebooks/SHRED_KKFLS_training.ipynb)
+- SHallow REcurrent Decoder (SHRED, [Williams et al., 2023](https://arxiv.org/abs/2301.12011)): [notebooks/SHRED_KKFLS_training.ipynb](./notebooks/SHRED_KKFLS_training.ipynb)
 
 #### Implicit Neural Representation (INR)
 ![SIREN_vs_RFFN](./figures/siren_vs_rffn_50_40epoch.gif)
-- Random Fourier Feature Network (RFFN): [notebooks/RFFN_KKFLS_training.ipynb](./notebooks/RFFN_KKFLS_training.ipynb)
-- Sinusoidal Representation Network (SIREN): [notebooks/SIREN_KKFLS_training.ipynb](./notebooks/SIREN_KKFLS_training.ipynb)
+- Random Fourier Feature Network (RFFN, [Tancik et al., 2020](https://arxiv.org/abs/2006.10739)): [notebooks/RFFN_KKFLS_training.ipynb](./notebooks/RFFN_KKFLS_training.ipynb)
+- Sinusoidal Representation Network (SIREN, [Sitzmann et al., 2020](https://arxiv.org/abs/2006.09661)): [notebooks/SIREN_KKFLS_training.ipynb](./notebooks/SIREN_KKFLS_training.ipynb)
 
 ## Data
-Please see [data/README.md](./data/README.md) for instructions on downloading Cook Inlet DAS data.
+The earthquake data from the Cook Inlet DAS experiment are available at [https://dasway.ess.washington.edu/gci/index.html](https://dasway.ess.washington.edu/gci/index.html). Events are updated daily.
 
-## Reference
-- Williams, J. P., Zahn, O., & Kutz, J. N. (2023). Sensing with shallow recurrent decoder networks. arXiv preprint arXiv:2301.12011.
-- Sitzmann, V., Martel, J., Bergman, A., Lindell, D., & Wetzstein, G. (2020). Implicit neural representations with periodic activation functions. Advances in Neural Information Processing Systems, 33, 7462-7473
-- Tancik, M., Srinivasan, P., Mildenhall, B., Fridovich-Keil, S., Raghavan, N., Singhal, U., ... & Ng, R. (2020). Fourier features let networks learn high frequency functions in low dimensional domains. Advances in Neural Information Processing Systems, 33, 7537-7547.
+Due to the huge size of the data used in this study, we cannot upload it directly in this repository. However, we prepared a Python script to download these data from our archival server. Please refer to [download.py](./data/download.py) in this directory.
+
+## Notes
+Comments and sugguestions are welcomed. Please report all issues under this repository.

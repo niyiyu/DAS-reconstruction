@@ -1,5 +1,7 @@
 # Distributed Acoustic Sensing Compression and Wavefield Reconstruction with Deep Learning
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+This study explores wavefield reconstruction using machine learning methods for data compression and wavefield separation. We test various architectures to treat DAS data as two-dimensional arrays, such as the `Implicit Neural Representation` (INR) models and the `SHallow REcurrent Decoder` (SHRED) model.
 ![](./figures/reconstruction.png)
 
 ## Tutorials

@@ -1,21 +1,25 @@
 import torch
 
+
 class SHRED(torch.nn.Module):
     def __init__(self, input_size, hidden_size, output_size, num_layers):
         super().__init__()
-        self.lstm = torch.nn.LSTM(input_size, hidden_size, num_layers, batch_first=True, dropout=0.1)
-        self.sdn1 = torch.nn.Linear(hidden_size, output_size//2)
-        self.sdn3 = torch.nn.Linear(output_size//2, output_size)
+        self.lstm = torch.nn.LSTM(
+            input_size, hidden_size, num_layers, batch_first=True, dropout=0.1
+        )
+        self.sdn1 = torch.nn.Linear(hidden_size, output_size // 2)
+        self.sdn3 = torch.nn.Linear(output_size // 2, output_size)
         self.relu = torch.nn.ReLU()
 
     def forward(self, x):
-        x = self.lstm(x)[1][0][-1] # should be -1
+        x = self.lstm(x)[1][0][-1]  # should be -1
         x = self.relu(self.sdn1(x))
         x = self.sdn3(x)
-        return 
-        
+        return
+
+
 class RandomFourierFeature(torch.nn.Module):
-    def __init__(self, nfeature, n_layers, n_outputs = 1):
+    def __init__(self, nfeature, n_layers, n_outputs=1):
         super().__init__()
         self.n_layers = n_layers
         self.n_outputs = n_outputs
@@ -33,8 +37,9 @@ class RandomFourierFeature(torch.nn.Module):
         for i in range(self.n_layers):
             layer = getattr(self, f"ln{i+1}")
             x = self.relu(layer(x))
-        x = 2*self.sigmoid(self.outputs(x))-1
+        x = 2 * self.sigmoid(self.outputs(x)) - 1
         return x
+
 
 class SIREN(torch.nn.Module):
     def __init__(self, n_input, n_output, n_layers, n_units, omega):
@@ -62,6 +67,6 @@ class SIREN(torch.nn.Module):
             layer = getattr(self, f"ln{i+1}")
             bias = getattr(self, f"ln{i+1}_bias")
             x = torch.sin(self.omega * layer(x) + bias)
-        x = 2*self.sigmoid(self.outputs(x) + self.outputs_bias) - 1
+        x = 2 * self.sigmoid(self.outputs(x) + self.outputs_bias) - 1
 
         return x

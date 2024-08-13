@@ -1,8 +1,9 @@
 # Download data from Cook Inlet DAS Experiment
 # Yiyu Ni (niyiyu@uw.edu)
 
-import pandas as pd
 import os
+
+import pandas as pd
 import wget
 
 # download data for TERRA?
@@ -34,8 +35,8 @@ print(f"INFO: find {len(df)} events in the list.")
 
 # download data for each event
 for idx, i in df.iterrows():
-    date = i['date']
-    eid = i['IRIS ID']
+    date = i["date"]
+    eid = i["IRIS ID"]
     print("=============================================")
     print(f"INFO: processing event {eid} on {date}.")
     if TERRA:

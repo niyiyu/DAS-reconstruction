@@ -14,6 +14,7 @@ figures/INR/*.pdf
 *.out
 *.mov
 *.key
+SYNC.sh
 
 # docs shall not be uploaded
 docs/manuscript/

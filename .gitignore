@@ -18,6 +18,7 @@ figures/INR/*.pdf
 # docs shall not be uploaded
 docs/manuscript/
 docs/GCI-approval/
+docs/OOI*
 
 # Distribution / packaging
 .Python

@@ -19,7 +19,7 @@ The notebook of SHRED model training is available at [notebooks/SHRED_KKFLS_trai
 ## Data
 The earthquake data from the Cook Inlet DAS experiment are available at [https://dasway.ess.washington.edu/gci/index.html](https://dasway.ess.washington.edu/gci/index.html). Earthquakes and daily data reports will be updated daily.
 
-Due to the size of the data used in this study (~260 GB per cable), we cannot upload it directly in this repository. However, we prepared a Python script to download these data from our archival server. Please refer to the script [download.py](./data/download.py) in the repository.
+Due to the size of the data used in this study (~260 GB per cable), we cannot upload it directly in this repository. However, we prepared a Python script to download these data from our archival server. Please refer to the script [download.py](./data/download.py) and list of events [event_list.csv](./data/event_list.csv) in the repository.
 
 ## Reference
 Ni, Y., Denolle, M. A., Shi, Q., Lipovsky, B. P., Pan, S., & Kutz, J. N. (2024). Wavefield Reconstruction of Distributed Acoustic Sensing: Lossy Compression, Wavefield Separation, and Edge Computing. Journal of Geophysical Research: Machine Learning and Computation, accepted.

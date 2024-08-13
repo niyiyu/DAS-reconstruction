@@ -8,12 +8,16 @@ figures/INR/*.pdf
 *.so
 
 # misc
-data/SHRED
-figures/manuscript
 *.docs
 *.pptx
 *.pt
 *.out
+*.mov
+*.key
+
+# docs shall not be uploaded
+docs/manuscript/
+docs/GCI-approval/
 
 # Distribution / packaging
 .Python

@@ -15,7 +15,7 @@ class SHRED(torch.nn.Module):
         x = self.lstm(x)[1][0][-1]  # should be -1
         x = self.relu(self.sdn1(x))
         x = self.sdn3(x)
-        return
+        return x
 
 
 class RandomFourierFeature(torch.nn.Module):

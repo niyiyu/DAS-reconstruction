@@ -22,4 +22,4 @@ The earthquake data from the Cook Inlet DAS experiment are hosted at [https://da
 Due to the size of the data used in this study (~260 GB per cable), we cannot upload it directly in this repository. However, we prepared a Python script to download these data from our archival server. Please refer to the script [download.py](./data/download.py) and list of events [event_list.csv](./data/event_list.csv) in the repository.
 
 ## Reference
-Ni, Y., Denolle, M. A., Shi, Q., Lipovsky, B. P., Pan, S., & Kutz, J. N. (2024). Wavefield Reconstruction of Distributed Acoustic Sensing: Lossy Compression, Wavefield Separation, and Edge Computing. _Journal of Geophysical Research: Machine Learning and Computation_, 1(3), e2024JH000247.
+Ni, Y., Denolle, M. A., Shi, Q., Lipovsky, B. P., Pan, S., & Kutz, J. N. (2024). Wavefield Reconstruction of Distributed Acoustic Sensing: Lossy Compression, Wavefield Separation, and Edge Computing. _Journal of Geophysical Research: Machine Learning and Computation_, 1(3), e2024JH000247. [10.1029/2024JH000247](https://doi.org/10.1029/2024JH000247)

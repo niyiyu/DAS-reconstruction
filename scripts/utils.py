@@ -39,3 +39,22 @@ def clean_up():
 
 def count_weights(model):
     return sum(p.numel() for p in model.parameters() if p.requires_grad)
+
+
+def get_array(x):
+    if isinstance(x, torch.Tensor):
+        return x.cpu().detach().numpy()
+    else:
+        return x
+    
+
+def estimate_size(model):
+    param_size = 0
+    for param in model.parameters():
+        param_size += param.nelement() * param.element_size()
+
+    buffer_size = 0
+    for buffer in model.buffers():
+        buffer_size += buffer.nelement() * buffer.element_size()
+
+    return param_size + buffer_size

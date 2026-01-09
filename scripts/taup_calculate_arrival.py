@@ -77,7 +77,7 @@ terra_lat = np.interp(
 
 
 #############################################################################
-def calculate_ps(i, rlat, rlon, olat, lon, depth):
+def calculate_ps(i, rlat, rlon, olat, olon, depth):
     dist = geo.great_circle((olat, olon), (rlat[i], rlon[i]))
     dist_deg = dist.km * 180.0 / (np.pi * dist.RADIUS)
     _p = model.get_travel_times(
